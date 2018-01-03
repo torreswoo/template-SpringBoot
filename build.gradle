@@ -24,6 +24,14 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// SpringBoot | web
+	compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+	testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+
+	// SpringBoot | Actuator
+	compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
+	// Spring-Boot Actuator doc - /docs
+//	compile "org.springframework.boot:spring-boot-actuator-docs:${springBootVersion}"
+	// Spring-Boot remote shell - ssh user@localhost -p 9500
+//	compile "org.springframework.boot:spring-boot-starter-remote-shell:${springBootVersion}"
 }

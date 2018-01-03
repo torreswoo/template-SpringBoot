@@ -1,3 +1,5 @@
 .idea
 .gradle
 template.iml
+/build/
+/out/
