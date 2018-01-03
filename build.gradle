@@ -1,6 +1,13 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.9.RELEASE'
+        versions = [
+                jdk                : '1.8',
+                lombok			   : '1.16.8',
+                logback			   : '1.1.7',	// Logging
+                log4j			   : '1.2.14',
+                slf4j			   : '1.7.21'
+        ]
 	}
 	repositories {
 		mavenCentral()
@@ -29,9 +36,20 @@ dependencies {
 	testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 
 	// SpringBoot | Actuator
+    // - doc - /docs
+    // - remote shell $> ssh user@localhost -p 2000
 	compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
-	// Spring-Boot Actuator doc - /docs
-//	compile "org.springframework.boot:spring-boot-actuator-docs:${springBootVersion}"
-	// Spring-Boot remote shell - ssh user@localhost -p 9500
-//	compile "org.springframework.boot:spring-boot-starter-remote-shell:${springBootVersion}"
+	compile "org.springframework.boot:spring-boot-actuator-docs:${springBootVersion}"
+	compile "org.springframework.boot:spring-boot-starter-remote-shell:${springBootVersion}"
+
+    // SpringBoot | Admin UI
+    compile "de.codecentric:spring-boot-admin-server:1.4.6"
+    compile "de.codecentric:spring-boot-admin-server-ui:1.4.6"
+    compile 'de.codecentric:spring-boot-admin-starter-client:1.4.6'
+
+    // Lombok
+    compile "org.projectlombok:lombok:${versions.lombok}"
+
+
 }
+
