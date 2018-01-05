@@ -130,7 +130,7 @@ function JmxChartsFactory(keepHistorySec, pollInterval, columnsCount) {
       chart : {
         renderTo : createNewPortlet(mbeans[0].name),
         animation : false,
-        defaultSeriesType : 'area',
+        defaultSeriesType : 'areaspline',
         shadow : false
       },
       title : {

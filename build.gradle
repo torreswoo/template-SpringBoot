@@ -31,7 +31,8 @@ repositories {
 
 
 dependencies {
-	// SpringBoot | web
+
+    // SpringBoot | web
 	compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
 	testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
