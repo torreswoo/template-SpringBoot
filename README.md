@@ -1,8 +1,30 @@
 # Torres SpringBoot Project template
 
+- build, run
+```
+$ ./gradlew build
+$ ./gradlew bootrun
+```
+
 ### SpringBoot | Actuator
-- usage : http://localhost:8080/docs
+```
+- http://localhost:8080/docs
+- http://localhost:8080/mappings
+```
 ### SpringBoot | Admin
-- usage : http://localhost:8080
+```
+- http://localhost:8080
+```
 ### SpringBoot | remote shell
-- usage : $> ssh user@localhost -p 2000  // $ dashboard, metrics, thread top
+```
+$ ssh user@localhost -p 2000 
+$ dashboard 
+$ metrics
+$ thread top
+```
+
+### dashboard
+```
+- http://localhost:8080/intro
+- http://localhost:8080/dashboard
+```
