@@ -1,0 +1,36 @@
+@import "_variables";
+
+#header-logo,
+#page-header {
+  height: 60px;
+}
+#header-logo {
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  float: left;
+  position: relative;
+
+  .logo-content {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    left: 20px;
+    top: 26%;
+  }
+}
+
+.logo-bg {
+  /*background-color: rgba(255,255,255,.1);*/
+  color: #fff;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

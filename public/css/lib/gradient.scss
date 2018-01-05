@@ -1,0 +1,51 @@
+.bg-gradient-1,
+.bg-gradient-2,
+.bg-gradient-3,
+.bg-gradient-4,
+.bg-gradient-5,
+.bg-gradient-6,
+.bg-gradient-7,
+.bg-gradient-8,
+.bg-gradient-9 {
+  background-color: transparent!important
+}
+.bg-gradient-1 {
+  background: radial-gradient(circle at 8.75% 8.45%, #003973, transparent 100%), radial-gradient(circle at 94.06% 82.83%, #E5E5BE, transparent 100%), radial-gradient(circle at 50% 50%, #668cc2, #668cc2 100%)
+}
+.bg-gradient-2 {
+  background: radial-gradient(circle at 1.98% 3%, #00a792, transparent 100%), radial-gradient(circle at 98.02% 98%, #56B4D3, transparent 100%), radial-gradient(circle at 50% 50%, #668cc2, #668cc2 100%)
+}
+.bg-gradient-3 {
+  background: radial-gradient(circle at 1.98% 74.02%, #E55D87, transparent 100%), radial-gradient(circle at 98.02% 35.97%, #5FC3E4, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-4 {
+  background: radial-gradient(circle at 1.98% 2%, #B993D6, transparent 100%), radial-gradient(circle at 98.02% 92.01%, #8CA6DB, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-5 {
+  background: radial-gradient(circle at 1.98% 89.01%, #7474BF, transparent 100%), radial-gradient(circle at 98.02% 21.98%, #348AC7, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-6 {
+  background: radial-gradient(circle at 1.98% 40.96%, #00c6ff, transparent 100%), radial-gradient(circle at 98.02% 52.04%, #0072ff, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-7 {
+  background: radial-gradient(circle at 1.98% 85.01%, #134E5E, transparent 100%), radial-gradient(circle at 98.02% 18.98%, #71B280, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-8 {
+  background: radial-gradient(circle at 1.98% 20.98%, #4b6cb7, transparent 100%), radial-gradient(circle at 98.02% 20.98%, #182848, transparent 100%), radial-gradient(circle at 50% 50%, #0cc285, #0cc285 100%)
+}
+.bg-gradient-9 {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodâ€¦IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(-65deg, #008fe2 0, #00b29c 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #008fe2), color-stop(100%, #00b29c));
+  background: -webkit-linear-gradient(-65deg, #008fe2 0, #00b29c 100%);
+  background: -o-linear-gradient(-65deg, #008fe2 0, #00b29c 100%);
+  background: -ms-linear-gradient(-65deg, #008fe2 0, #00b29c 100%);
+  background: linear-gradient(154deg, #008fe2 0, #00b29c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008fe2', endColorstr='#00b29c', GradientType=1);
+}
+.bg-gradient-10 {
+  background: radial-gradient(circle at 1.98% 3%, #ED433A, transparent 100%), radial-gradient(circle at 98.02% 98%, #e5a697, transparent 100%), radial-gradient(circle at 50% 50%, #cfd762, #c2a93e 100%);
+}
+.bg-development {
+  background: #333;
+}

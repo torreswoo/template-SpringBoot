@@ -24,6 +24,8 @@ $ thread top
 ```
 
 ### dashboard
+- gradient
+- HTML5 boilerplate | https://html5boilerplate.com/
 ```
 - http://localhost:8080/intro
 - http://localhost:8080/dashboard

@@ -1,0 +1,60 @@
+#page-sidebar,
+.main-header,
+.top-bar {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out
+}
+#page-header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  opacity: 0.8;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out
+}
+#page-wrapper{
+  position: absolute;
+  width: 100%;
+  top: 60px;
+}
+#page-content, #page-sidebar {
+  transition: margin .7s ease;
+  -moz-transition: margin .7s ease;
+  -webkit-transition: margin .7s ease;
+}
+
+#page-content-wrapper {
+  float: left;
+  width: 100%;
+}
+#page-content {
+  background: #fafcfe;
+  padding: 0px 20px;
+
+  >.container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+div.page-content-with-sidebar {
+  background: #fafcfe;
+  margin-left: $sidebar-width;
+  padding: 20px 30px;
+
+  >.container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+div.search-container {
+  margin-bottom: 20px;
+}
