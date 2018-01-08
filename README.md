@@ -32,3 +32,16 @@ $ thread top
 - http://localhost:8080/intro
 - http://localhost:8080/dashboard
 ```
+
+---
+
+## Library
+- SpringBoot | v1.5.9 | https://projects.spring.io/spring-boot/
+- Lombok | v1.16.8 | https://projectlombok.org/ 
+
+- jQuery | v1.12.1 | http://jquery.com
+- jQuery UI | v1.12.1 | https://jqueryui.com/
+- Bootstrap | v3.3.7 | https://getbootstrap.com/docs/3.3/
+- Font Awesome | v4.7.0 | http://fontawesome.io/
+- Highcharts | v6.0.4 (2017-12-15) | https://www.highcharts.com/download
+- jolokia | v1.3.7 | https://jolokia.org/download.html
