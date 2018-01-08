@@ -22,6 +22,8 @@ $ dashboard
 $ metrics
 $ thread top
 ```
+### jolokia
+- https://jolokia.org/reference/html/index.html
 
 ### dashboard
 - gradient

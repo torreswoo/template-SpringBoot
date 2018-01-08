@@ -1,6 +1,12 @@
 $(document).ready(function() {
+
+  // config JMX chart factory
   var factory = new JmxChartsFactory();
-  factory.create([ {
+
+  // Memory
+  // - http://localhost:8080/jolokia/read/java.lang:type=Memory
+  factory.create([
+    {
     name : 'java.lang:type=Memory',
     attribute : 'HeapMemoryUsage',
     path : 'committed'
@@ -8,25 +14,42 @@ $(document).ready(function() {
     name : 'java.lang:type=Memory',
     attribute : 'HeapMemoryUsage',
     path : 'used'
-  } ]);
+  }, {
+      name : 'java.lang:type=Memory',
+      attribute : 'HeapMemoryUsage',
+      path : 'init'
+    }
+  ]);
+
+  // OperatingSystem
+  // - http://localhost:8080/jolokia/read/java.lang:type=OperatingSystem
   factory.create([ {
     name : 'java.lang:type=OperatingSystem',
     attribute : 'SystemLoadAverage'
   } ]);
-  factory.create({
-    name : 'java.lang:type=Threading',
-    attribute : 'ThreadCount'
-  });
-  // factory.create([
-  // {
-  // name: 'Tomcat:name="http-nio-8080",type=ThreadPool',
-  // attribute: 'currentThreadsBusy'
-  // },
-  // {
-  // name: 'Tomcat:name=executor,type=Executor',
-  // attribute: 'queueSize'
-  // }
-  // ]);
+
+  // Threading
+  // - http://localhost:8080/jolokia/read/java.lang:type=Threading
+  factory.create([
+    {
+      name : 'java.lang:type=Threading',
+      attribute : 'PeakThreadCount'
+    }, {
+      name : 'java.lang:type=Threading',
+      attribute : 'ThreadCount'
+    }, {
+      name : 'java.lang:type=Threading',
+      attribute : 'DaemonThreadCount'
+    }
+  ]);
+
+  // factory.create([{
+  //   name: 'Tomcat:name="http-nio-8080",type=ThreadPool',
+  //   attribute: 'currentThreadsBusy'
+  //   }, {
+  //   name: 'Tomcat:name=executor,type=Executor',
+  //   attribute: 'queueSize'
+  // }]);
   // factory.create([
   // {
   // name:
@@ -41,28 +64,54 @@ $(document).ready(function() {
   // ]);
 });
 
+/* JmxChartsFactory
+ * set mbeans -> create()
+ * set parameter
+ *  - columnsCount : the number of the chart in the one row (default:3)
+ *  - keepHistorySec : (dafault:600)
+ *  - pollInterval : (dafault:1000)
+ *
+ */
 function JmxChartsFactory(keepHistorySec, pollInterval, columnsCount) {
+  /*
+   * set mbeans
+   * - mbeans -> series, monitoredMbeans
+   */
   var jolokia = new Jolokia("/jolokia");
   var series = [];
   var monitoredMbeans = [];
   var chartsCount = 0;
-
-  columnsCount = columnsCount || 3;
-  pollInterval = pollInterval || 1000;
-  var keepPoints = (keepHistorySec || 600) / (pollInterval / 1000);
-
-  setupPortletsContainer(columnsCount);
-
-  setInterval(function() {
-    pollAndUpdateCharts();
-  }, pollInterval);
-
   this.create = function(mbeans) {
     mbeans = $.makeArray(mbeans);
     series = series.concat(createChart(mbeans).series);
     monitoredMbeans = monitoredMbeans.concat(mbeans);
   };
 
+  /*
+   * set init parameter
+   */
+  columnsCount = columnsCount || 3;
+  pollInterval = pollInterval || 1000;
+  // var keepPoints = (keepHistorySec || 600) / (pollInterval / 1000);
+  var keepPoints = 300;
+  console.log(keepPoints);
+
+  /*
+   * set Portlets Container
+   */
+  setupPortletsContainer(columnsCount);
+
+  /*
+   * set interval - poll & update chart
+   */
+  setInterval(function() {
+    pollAndUpdateCharts();
+  }, pollInterval);
+
+
+  /* ======================================================================
+   * methods
+   * ====================================================================== */
   function pollAndUpdateCharts() {
     var requests = prepareBatchRequest();
     var responses = jolokia.request(requests);
