@@ -52,7 +52,6 @@ dependencies {
     // Thymeleaf
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 
-
     // Lombok
     compile "org.projectlombok:lombok:${versions.lombok}"
 
