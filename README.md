@@ -1,4 +1,4 @@
-# Torres SpringBoot Project template
+# Torres SpringBoot Project templates
 
 - build, run
 ```
@@ -36,9 +36,10 @@ $ thread top
 ---
 
 ## Library
+| name | version  | download link |
+| --- | --- | --- |
 | SpringBoot | v1.5.9 | https://projects.spring.io/spring-boot/ |
 | Lombok | v1.16.8 | https://projectlombok.org/ |
-| --- | --- | --- |
 | jQuery | v1.12.1 | http://jquery.com | 
 | jQuery UI | v1.12.1 | https://jqueryui.com |
 | Bootstrap | v3.3.7 | https://getbootstrap.com/docs/3.3/ |

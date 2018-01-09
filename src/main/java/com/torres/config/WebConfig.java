@@ -14,10 +14,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry){
 
-        System.out.println("test");
-        registry
-                .addViewController("/intro")
-                .setViewName("forward:/ops/index.html");
         registry
                 .addViewController("/dashboard")
                 .setViewName("forward:/ops/dashboard.html");
