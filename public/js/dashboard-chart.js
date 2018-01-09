@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // config JMX chart factory
   var
-    keepHistorySec = 180,
+    keepHistorySec = 60,
     pollInterval = 1000,
     columnsCount = 3;
 
@@ -19,10 +19,6 @@ $(document).ready(function() {
       name : 'java.lang:type=Memory',
       attribute : 'HeapMemoryUsage',
       path : 'used'
-    }, {
-      name : 'java.lang:type=Memory',
-      attribute : 'HeapMemoryUsage',
-      path : 'init'
     }
   ]);
 
@@ -87,6 +83,7 @@ function JmxChartsFactory(keepHistorySec, pollInterval, columnsCount) {
   columnsCount = columnsCount || 3;
   pollInterval = pollInterval || 1000;
   var keepPoints = (keepHistorySec || 600) / (pollInterval / 1000);
+  console.log('- JmxChartsFactory | keepPoints : ', keepPoints);
 
   /*
    * set mbeans
