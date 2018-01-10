@@ -5,11 +5,11 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.core.Ordered;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
-
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry){

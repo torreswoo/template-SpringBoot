@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AppViewController {
 
+    // intro
+    // (Thymeleaf)
     @RequestMapping(value="/intro", method = RequestMethod.GET)
     public String intro(Model model){
 
