@@ -50,10 +50,8 @@ $ thread top
 - springfox :http://springfox.github.io/springfox/
 
 ### dashboard
-- gradient
-- HTML5 boilerplate | https://html5boilerplate.com/
 ```
 - http://localhost:8080/          # Swagger
-- http://localhost:8080/intro
+- http://localhost:8080/intro     # intro page (Thymeleaf)
 - http://localhost:8080/dashboard # App Dashboard
 ```
