@@ -7,6 +7,14 @@
 $ ./gradlew build
 $ ./gradlew bootrun
 ```
+## dashboard
+```
+- http://localhost:8080/          # Swagger
+- http://localhost:8080/intro     # intro page (Thymeleaf)
+- http://localhost:8080/dashboard # App Dashboard
+```
+![springboot-jolokia-dashboard](/docs/images/dashboard01.png)
+
 
 ---
 ## Library
@@ -50,9 +58,4 @@ $ thread top
 ### Swagger & springfox
 - springfox :http://springfox.github.io/springfox/
 
-### dashboard
-```
-- http://localhost:8080/          # Swagger
-- http://localhost:8080/intro     # intro page (Thymeleaf)
-- http://localhost:8080/dashboard # App Dashboard
-```
+
