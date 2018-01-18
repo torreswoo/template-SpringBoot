@@ -16,6 +16,21 @@ $ ./gradlew bootrun
 ```
 ![springboot-jolokia-dashboard](/docs/images/dashboard01.png)
 
+## Configuration files
+| path file | info |
+| --- | --- |
+| .gitignore | --- |
+| build.gradle | Gradle build 파일 |
+| /gradle/querydsl.gradle | Gradle QueryDSL 설정파일 |
+| /public/* | web static resource : HTML, CSS, javascript |
+| /config/application.yml | profile, DB설정파일 |
+| /src/main/generated/* | Q파일 |
+| /src/main/resources/application.properties |  |
+| /src/main/resources/logback.groovy | logging 설정 - Groovy |
+| /src/main/resources/logback.xml | logging 설정 - XML |
+| /src/main/resources/ data.sql, schema.sql, import.sql | datasource initial SQL |
+| /src/main/resources/templates/ | Template engine view - Thymeleaf |
+
 
 ---
 ## Library
