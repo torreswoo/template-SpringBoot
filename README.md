@@ -45,6 +45,10 @@ $ ./gradlew bootrun
 | Highcharts | v6.0.4 (2017-12-15) | https://www.highcharts.com/download |
 | jolokia | v1.3.7 | https://jolokia.org/download.html |
 | springfox | v2.6.0 | http://springfox.github.io/springfox/ |
+| H2 | v1.4.190 | http://www.h2database.com/ |
+| Spring Data JPA | 1.11.9 | https://projects.spring.io/spring-data-jpa |
+| QueryDSL | v4.1.4 | http://www.querydsl.com/ |
+
 
 ---
 ## Details
