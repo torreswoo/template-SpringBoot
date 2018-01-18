@@ -7,9 +7,12 @@ buildscript {
                 logback			   : '1.1.7',	// Logging
                 log4j			   : '1.2.14',
                 slf4j			   : '1.7.21',
-                springfox          : '2.6.0'
-        ]
+                springfox          : '2.6.0',
+				h2				   : '1.4.190'
+		]
 	}
+	ext.gradleScriptDir = "${project.getRootDir()}/gradle"
+
 	repositories {
 		mavenCentral()
 	}
@@ -60,6 +63,14 @@ dependencies {
     compile "io.springfox:springfox-swagger2:${versions.springfox}"
     compile "io.springfox:springfox-swagger-ui:${versions.springfox}"
 
-
+	// datasource - H2
+	compile "com.h2database:h2:$versions.h2"
+	// datasource - JDBC
+	compile "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
+	// datasource - JPA
+	compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
 }
+
+// datasource - QueryDSL
+apply from: "$gradleScriptDir/querydsl.gradle"
 
