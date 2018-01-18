@@ -12,6 +12,7 @@ $ ./gradlew bootrun
 - http://localhost:8080/          # Swagger
 - http://localhost:8080/intro     # intro page (Thymeleaf)
 - http://localhost:8080/dashboard # App Dashboard
+- http://localhost:8080/console   # H2 web console
 ```
 ![springboot-jolokia-dashboard](/docs/images/dashboard01.png)
 
@@ -57,5 +58,13 @@ $ thread top
 
 ### Swagger & springfox
 - springfox :http://springfox.github.io/springfox/
+
+### Datasource
+- H2
+- MySQL
+
+### JPA & QueryDSL
+- SpringData JPA
+- QueryDSL
 
 

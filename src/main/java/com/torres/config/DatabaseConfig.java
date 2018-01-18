@@ -15,15 +15,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = {"com.torres.repository"})
 public class DatabaseConfig {
 
-    // H2 Config (Only for URL mapping)
-    // - usage url mapping : /console
-    @Bean
-    public ServletRegistrationBean h2servletRegistration() {
-        ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
-        registration.addUrlMappings("/console/*");
-        return registration;
-    }
-
     // DataSource Config
     // - application.yml : spring.datasource:
     @Bean
@@ -34,4 +25,21 @@ public class DatabaseConfig {
             .type(DataSource.class)  // DBCP - org.apache.tomcat.jdbc.pool.DataSource
             .build();
     }
+
+    // H2 Config (Only for URL mapping)
+    // - usage url mapping : /console
+    @Bean
+    public ServletRegistrationBean h2servletRegistration() {
+        ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
+        registration.addUrlMappings("/console/*");
+        return registration;
+    }
+
+    // JPA
+    // - usage : public interface ***Repository extends JpaRepository { ... }
+//    @Bean
+//    @ConfigurationProperties("spring.jpa")
+//    public JpaProperties jpaProperites (){
+//        return new JpaProperties();
+//    }
 }
