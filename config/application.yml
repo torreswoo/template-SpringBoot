@@ -26,4 +26,6 @@ spring.datasource:
 spring.jpa:
   database: MYSQL
   show-sql: true
-  hibernate.ddl-auto: create # create, update, none, validate
+  properties.hibernate.hbm2ddl.auto: create # create, update, none, validate
+  properties.hibernate.format_sql: true
+  properties.hibernate.use_sql_comments: true
