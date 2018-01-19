@@ -35,11 +35,14 @@ public class DatabaseConfig {
         return registration;
     }
 
+    // JDBC Config
+    // - usage : @Autowired  @Qualifier("basicJdbcTemplate") private JdbcTemplate jdbcTemplate;
+//    @Bean
+//    public JdbcTemplate basicJdbcTemplate(
+//        @Qualifier("dataSource") DataSource dataSource) {
+//        return new JdbcTemplate(dataSource);
+//    }
+
     // JPA
     // - usage : public interface ***Repository extends JpaRepository { ... }
-//    @Bean
-//    @ConfigurationProperties("spring.jpa")
-//    public JpaProperties jpaProperites (){
-//        return new JpaProperties();
-//    }
 }

@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -19,7 +20,11 @@ public class QUserActionLog extends EntityPathBase<UserActionLog> {
 
     public static final QUserActionLog userActionLog = new QUserActionLog("userActionLog");
 
+    public final DateTimePath<java.util.Date> actionTime = createDateTime("actionTime", java.util.Date.class);
+
     public final NumberPath<Integer> id = createNumber("id", Integer.class);
+
+    public final SetPath<ServiceAccountLog, QServiceAccountLog> serviceAccountLogs = this.<ServiceAccountLog, QServiceAccountLog>createSet("serviceAccountLogs", ServiceAccountLog.class, QServiceAccountLog.class, PathInits.DIRECT2);
 
     public final NumberPath<Long> userId = createNumber("userId", Long.class);
 
