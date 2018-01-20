@@ -1,4 +1,4 @@
-package com.torres;
+package com.torres.controller;
 
 import com.torres.domain.FraudDetectResponse;
 import com.torres.entity.UserActionLog;
@@ -8,32 +8,15 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Date;
 import java.util.List;
 
 @RestController
 @Slf4j
-public class AppController {
-
-    // Config - Swagger
-    @ApiOperation(value = "Swagger UI main", hidden= true)
-    @RequestMapping(value="/", method = RequestMethod.GET)
-    public RedirectView swaggerRedirect(){
-        return new RedirectView("/swagger-ui.html");
-    }
-
-    // API test
-    @RequestMapping(value="/hello", method = RequestMethod.GET)
-    public String hello(){
-
-        log.info("controller");
-        return "hello";
-    }
+public class AppApiController {
 
     // API Fraud Detection
     @Autowired
@@ -49,7 +32,8 @@ public class AppController {
         @ApiResponse(code = 400, message = "Bad Request - No exist this URL. check the URL again"),
         @ApiResponse(code = 404, message = "Not Found - Not Found. check user_id"),
         @ApiResponse(code = 500, message = "Internal Server Error") })
-    public @ResponseBody FraudDetectResponse fraudDetectResponse(@PathVariable Long user_id){
+    public @ResponseBody
+    FraudDetectResponse fraudDetectResponse(@PathVariable Long user_id){
 
         // TODO: check user_id is LONG?
         log.info("[REQ] {} - start check Fraud Detection.", user_id);
@@ -73,5 +57,4 @@ public class AppController {
         log.info("[RES] {} - fraud result : {}", user_id, fraudDetectResponse.getIs_fraud());
         return fraudDetectResponse;
     }
-
 }
