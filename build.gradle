@@ -74,3 +74,10 @@ dependencies {
 // datasource - QueryDSL
 apply from: "$gradleScriptDir/querydsl.gradle"
 
+def projectVersion = "1.0.0-SNAPSHOT"
+
+task printVersion {
+	doLast {
+		println projectVersion
+	}
+}

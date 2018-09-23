@@ -7,6 +7,21 @@
 $ ./gradlew build
 $ ./gradlew bootrun
 ```
+
+## Docker & GCP
+```
+# 
+$ gcloud auth configure-docker
+$ PUSH=true ./build_docker_image.sh
+
+# details
+$ docker build -t template-springboot:1.0.0-SNAPSHOT .
+$ docker tag template-springboot:1.0.0-SNAPSHOT gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+$ docker push gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+$ docker pull  gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+$ docker run -it -p 8080:8080 gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+```
+
 ## dashboard
 ```
 - http://localhost:8080/          # Swagger

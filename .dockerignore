@@ -1,0 +1,16 @@
+/.idea
+/.gradle
+/docker
+template.iml
+/out
+/logs
+/docs
+/src
+/public
+/gradle
+gradlew
+gradlew.bat
+README.md
+
+/build/classes
+/build/tmp
