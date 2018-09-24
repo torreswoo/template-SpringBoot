@@ -1,0 +1,25 @@
+version: '3.5'
+services:
+
+  service-template-spring-boot:
+    build:
+      context: .
+      dockerfile: Dockerfile  # image: gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+    container_name: template-springboot
+    restart: always
+    ports:
+    - 8080:8080
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_DATABASE: application
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+    - mysql
+    - wait-dependencies
+
+  wait-dependencies:
+    image: jwilder/dockerize
+    depends_on:
+    - mysql
+    command: dockerize -wait tcp://couchdb:5984 -wait tcp://mysql:3306 -timeout 5m
