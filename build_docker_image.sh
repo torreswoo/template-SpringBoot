@@ -3,11 +3,6 @@
 TAG="[build_docker_image.sh]"
 usage="Usage: PUSH=[false|true] ENV=[PROD|DEV] $0"
 
-if [ "$ENV" != "PROD" ] && [ "$ENV" != "DEV" ] ; then
-    echo ${usage}
-    exit 1
-fi
-
 if [ "$PUSH" == "" ]; then
   PUSH="false"
 fi

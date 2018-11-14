@@ -1,9 +1,19 @@
 # Torres SpringBoot Project templates
 - https://torreswoo.github.io/posts/springboot-jolokia/
+- check `http://localhost:8080/dashboard`
+```bash
+$ make compose.all # start all 
+or
+$ docker run -it -p 8080:8080 gcr.io/torrestemplate/template-springboot:1.0.0-SNAPSHOT
+```
 
 ## Start project
 - build, run
 ```
+$ make compose.all # start all 
+
+$ make mycli
+$ make compose
 $ ./gradlew build
 $ ./gradlew bootrun
 ```

@@ -22,4 +22,4 @@ services:
     image: jwilder/dockerize
     depends_on:
     - mysql
-    command: dockerize -wait tcp://couchdb:5984 -wait tcp://mysql:3306 -timeout 5m
+    command: dockerize -wait tcp://mysql:3306 -timeout 5m

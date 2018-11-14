@@ -67,6 +67,8 @@ dependencies {
 	compile "com.h2database:h2:$versions.h2"
 	// datasource - JDBC
 	compile "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
+	compile "mysql:mysql-connector-java:5.1.38"
+
 	// datasource - JPA
 	compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
 }
