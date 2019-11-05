@@ -27,7 +27,7 @@ compose:
 compose.all:
 	@ echo "[$(TAG)] ($(shell TZ=UTC date -u '+%H:%M:%S')) - Running docker-compose & application"
 	@ ./gradlew clean build
-	@ rm -rf public.tar.gz
+	@ rm -rf  public.tar.gz
 	@ tar -cvzf public.tar.gz ./public
 	@ docker stop $(docker ps -a -q) || true
 	@ docker rm -f $(docker ps -a -q) || true
