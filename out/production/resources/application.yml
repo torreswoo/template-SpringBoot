@@ -1,12 +1,11 @@
 spring.datasource:
   plarform: h2
-  driverClassName: org.h2.Driver
-  url: jdbc:h2:mem:mydb;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
-#  driverClassName: com.mysql.jdbc.Driver
-#  url: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:application}
-#  url: jdbc:mysql://localhost:3306/${MYSQL_DATABASE:application}
-#  username: ${MYSQL_ROOT_USER:root}
-#  password: ${MYSQL_ROOT_PASSWORD:root}
+  # driverClassName: org.h2.Driver
+  # url: jdbc:h2:mem:mydb;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:application}
+  username: ${MYSQL_ROOT_USER:root}
+  password: ${MYSQL_ROOT_PASSWORD:root}
   initialize: true # classpath:/schema.sql, import.sql, data.sql
 
   ## Pool Info ##
@@ -28,9 +27,3 @@ spring.jpa:
   properties.hibernate.hbm2ddl.auto: update # create, update, none, validate
   properties.hibernate.format_sql: true
   properties.hibernate.use_sql_comments: true
-
-redis:
-  host: localhost
-  port: 6379
-  password: ''
-  database: 0
