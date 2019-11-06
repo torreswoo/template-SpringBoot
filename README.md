@@ -1,4 +1,4 @@
-# Torres SpringBoot Project templates.
+# Torres SpringBoot Project template
 - https://torreswoo.github.io/posts/springboot-jolokia/
 - check `http://localhost:8080/dashboard`
 ```bash
